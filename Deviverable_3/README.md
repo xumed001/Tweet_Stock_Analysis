@@ -1,7 +1,12 @@
 ## Deliverable 3
 
+The deliverable 3 folder contains work that were completed in the iteration progress from weeks 2 and 3. For the summary of the project as a whole, reference the main readme file uner `**Tweet_Stock_Analysis**`.
+
+### Presentation Slides
+Updated presentation slides to capture project summary, selection journey, technology used, data exploration, data analysis, machine learning, data visualization, conclusion and iteration opportunities. **[Click Here to Access Presentation Slides](https://docs.google.com/presentation/d/1eiDhg26rj6FX_s-b5r3N7FIJo1qq6LhwhcxKrEpWc80/edit?usp=sharing)**
+
 ### Database Connection
-Data collected from Kaggle and Yahoo Finance were cleaned using `pandas` and brought into our postgress sql database, `pgadmin 4`. Ticker tables (x5) were brought into our database and consolidated to form our master table data using postgres and connected to our ipynb file for machine learning.
+Data collected from Kaggle and Yahoo Finance were cleaned using `pandas` and brought into our postgress sql database, `pgadmin 4`. Ticker tables (x5) were brought into our database and consolidated to form our master table data using postgres and connected to our ipynb file for machine learning. This step added the connection requirement that was further clarified with our TA.
 
 
 ### Machine Learning 
@@ -29,3 +34,76 @@ Data collected from Kaggle and Yahoo Finance were cleaned using `pandas` and bro
 
 - Description of current accuracy score
   - As mentioned above the current model yeilds an accuracy score of 97%. Meaning the model can predict if a given stock is liquid (above avg daily volume ) feeding the dataset with extreme accuracy. 
+
+### Dashboard and Analysis
+
+**[Click Here to Visit Our Dashboard](https://public.tableau.com/views/Tweet_Stock_Analysis/Dashboard12?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)**
+
+#### Tweet Volume
+
+![tweet_volume.png](../analysis_images/tweet_volume.png) 
+
+*Purpose:* Find which companies are receiving the most tweets and interactions. 
+
+*Analysis:* 
+- Sum of all tweets 2015-2019 
+- Color by sum of likes, comments, and retweets 
+
+#### Price Action Over Time 
+
+![heat_map.png](../analysis_images/heat_map.png) 
+
+*Purpose:* Identify the companies seeing the most change in daily price. 
+
+*Analysis:* 
+- Yearly sum of Price Action per Company 
+- Color based on Price Action 
+
+#### Scatter Plot of Tweet and Stock Volumes 
+
+![scatter_plot.png](../analysis_images/scatter_plot.png) 
+
+*Purpose:* Identify the correlation between twitter activity and stock liquidity to align with machine learning. 
+
+*Analysis:* 
+- Scatter plot of Tweet Volume against Stock Volume 
+- Size based on Tweet Volume 
+- Trend line to indicate linear correlation 
+- Color by company name 
+- URL Action to Explore Machine Learning 
+
+#### Twitter and Stock Volume Over Time 
+
+![volume_time.png](../analysis_images/volume_time.png)
+
+*Purpose:* Can we identify any spikes in the Twitter and Stock volumes. 
+
+*Analysis:* 
+- A bar chart of all Tweet Volume 
+- A line chart of Tweet Volume with colors by Company 
+- Both plotted again Month-Year dates 
+- URL Action to Explore Machine Learning
+
+#### Popular Authors 
+
+![pop_authors.png](../analysis_images/pop_authors.png) 
+
+*Purpose:* Identify Tweet authors that may be driving spikes in engagement. 
+
+*Analysis:* 
+- Bar chart of authors and count of tweets 
+- Bar chart of authors and sum of likes, comments, and retweets 
+- Sorted by Count of Tweets 
+- Color by company name 
+- Filter by date 
+
+#### Popular Tweets 
+
+![pop_tweets.png](../analysis_images/pop_tweets.png) 
+
+*Purpose:* Use bodies of popular Tweets to identify if any current events driving spikes in social media engagement. 
+
+*Analysis:* 
+- Heat map of Tweets with more than 1,000 combined retweets, likes, and comments 
+- Color and size by sum of engagement 
+- Filter by date 

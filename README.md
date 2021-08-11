@@ -9,14 +9,16 @@ The purpose of this project is to analyze the correlation, if any, that engageme
  - Does tweets impact price action?
 
 ## Presentation Slides
-
-The presentation can also be accessed to its direct google slides link through the link below.
-URL: https://docs.google.com/presentation/d/1eiDhg26rj6FX_s-b5r3N7FIJo1qq6LhwhcxKrEpWc80/edit#slide=id.g7ce6850189_0_111
+Presentation slides to capture project summary, selection journey, technology used, data exploration, data analysis, machine learning, data visualization, conclusion and iteration opportunities. **[Click Here to Access Presentation Slides](https://docs.google.com/presentation/d/1eiDhg26rj6FX_s-b5r3N7FIJo1qq6LhwhcxKrEpWc80/edit?usp=sharing)**
 
 ## Technology 
 
   ### Data Cleaning and Analysis
-  Excel csvs from Kaggle were used to import the data for tweet data, and Yahoo Finance for stock data. `Pandas` was to clean the data and perform an exploratory analysis. Further analysis and manipulation was completed using Python before the data was imported to our PostgresSQL database and connected to our machine learning model. 
+  Excel csvs from Kaggle were used to import the data for tweet data, and Yahoo Finance was utilized for stock/ticker data (Apple, Tesla, Google, Amazon, and Microsoft). `Pandas` was to clean the data and perform an exploratory analysis. Further analysis and manipulation was completed using Python before the data was imported to our PostgresSQL database and connected to our machine learning model.
+
+The ERD for the database that will connect each of these data sources is shown below.
+
+![rough_stock_erd.png](Deliverable_1/ERD_v.1/rough_stock_erd.PNG)
 
   ### Database Storage
   The database utilized was PostgresSQL with pgadmin 4. Data collected from Kaggle and Yahoo Finance were cleaned during the pre-processing stages with `pandas` and brought into our environment. 5 Ticker tables were brought into our database, 1 for each ticker, and further consolidated to form our master table data. Postgres database was then connected our our machine learning ipynb file for further analysis for prediction and accuracy.
@@ -25,15 +27,84 @@ URL: https://docs.google.com/presentation/d/1eiDhg26rj6FX_s-b5r3N7FIJo1qq6Lhwhcx
   SciKitLearn and Tensorflow is the ML library utilized. Machine Learning models utilized were `Linear Regression`, `Logistic Regression`, and `Artifical Neural Network`.
 
 
-  ### Dashboard
-  Our final Dashboard is LIVE and available on Tableau public with our findings and ML predictions. Analysis includes dynamic integrations between tweet, date, and stock ticker to provide visual grasp to our end users on how tweets and the stock exchange share a relationship in stock liquidity. Analysis of our findings include Tweet Impacts on Stock Prices and Examining Tweet Engagement. Our visualizations can be found by clicking the link below.
-  **URL**: https://public.tableau.com/app/profile/tara.flynn/viz/Bootcamp_Roughdraft/Dashboard1
+  ### Dashboard and Analysis
+  Our final Dashboard is LIVE and available on Tableau public with our findings and ML predictions. Analysis includes dynamic integrations between tweet, date, and stock ticker to provide visual grasp to our end users on how tweets and the stock exchange share a relationship in stock liquidity. Analysis of our findings include Tweet Impacts on Stock Prices and Examining Tweet Engagement. 
   
-## The Data 
+  **[Click Here to Visit Our Tableau Public Dashboard.](https://public.tableau.com/app/profile/tara.flynn/viz/Tweet_Stock_Analysis/Dashboard12?publish=yes)** 
 
-The data that will be used in this analysis include a csv with opening/closing information for all NASDAQ, S&P500, and NYSE listed companies which is updated weekly. There are also csv's for tweets about the stock tickers of each of the top five technology companies (Amazon, Tesla, Google, Apple, Microsoft) from years 2015 to 2020. The planned ERD for the database that will connect each of these data sources looks like: 
+#### Dashboard Pre-Construction
+![dashboard_planning.png](analysis_images/dashboard_planning.png)
 
-![rough_stock_erd.png](Deliverable_1/ERD_v.1/rough_stock_erd.PNG)
+*Purpose:* Identify framework of widgets, interactive elements, and portraying key stories using data analysis of Twitter's impact on NASDAQ Stocks.
+
+#### Tweet Volume
+
+![tweet_volume.png](analysis_images/tweet_volume.png) 
+
+*Purpose:* Find which companies are receiving the most tweets and interactions. 
+
+*Analysis:* 
+- Sum of all tweets 2015-2019 
+- Color by sum of likes, comments, and retweets 
+
+#### Price Action Over Time 
+
+![heat_map.png](analysis_images/heat_map.png) 
+
+*Purpose:* Identify the companies seeing the most change in daily price. 
+
+*Analysis:* 
+- Yearly sum of Price Action per Company 
+- Color based on Price Action 
+
+#### Scatter Plot of Tweet and Stock Volumes 
+
+![scatter_plot.png](analysis_images/scatter_plot.png) 
+
+*Purpose:* Identify the correlation between twitter activity and stock liquidity to align with machine learning. 
+
+*Analysis:* 
+- Scatter plot of Tweet Volume against Stock Volume 
+- Size based on Tweet Volume 
+- Trend line to indicate linear correlation 
+- Color by company name 
+- URL Action to Explore Machine Learning 
+
+#### Twitter and Stock Volume Over Time 
+
+![volume_time.png](analysis_images/volume_time.png)
+
+*Purpose:* Can we identify any spikes in the Twitter and Stock volumes. 
+
+*Analysis:* 
+- A bar chart of all Tweet Volume 
+- A line chart of Tweet Volume with colors by Company 
+- Both plotted again Month-Year dates 
+- URL Action to Explore Machine Learning
+
+#### Popular Authors 
+
+![pop_authors.png](analysis_images/pop_authors.png) 
+
+*Purpose:* Identify Tweet authors that may be driving spikes in engagement. 
+
+*Analysis:* 
+- Bar chart of authors and count of tweets 
+- Bar chart of authors and sum of likes, comments, and retweets 
+- Sorted by Count of Tweets 
+- Color by company name 
+- Filter by date 
+
+#### Popular Tweets 
+
+![pop_tweets.png](analysis_images/pop_tweets.png) 
+
+*Purpose:* Use bodies of popular Tweets to identify if any current events driving spikes in social media engagement. 
+
+*Analysis:* 
+- Heat map of Tweets with more than 1,000 combined retweets, likes, and comments 
+- Color and size by sum of engagement 
+- Filter by date 
 
 ## Machine Learning Model 
 
@@ -63,3 +134,8 @@ This analysis will use a neural network with Relu activation to model the correl
 
 **Description of current accuracy score:**
  - As mentioned above the current model yields an accuracy score of 97%. Meaning the model can predict if a given stock is liquid (above avg daily volume ) feeding the dataset with extreme accuracy. 
+
+## Conclusion
+Through our research, we identified that our original hypothesis was indeed correct that Twitter activity has an impact and correlation with stock activity. From our findings, we were able to predict with a 97% accuracy of Tweets vs Stock Liquidity. Regarding twitter vs action price, we were not able to find a strong correlation, but we identified ways for research to be investigated further through next step iterations.
+
+For next step iterations, there is opportunity to further drill into qualititative tweet features using Vader, to categorize tweets through positive, neutral, or negative tweets to further verify their impact on stock liquidity and of course price action. We believe that this next step iteration can be cruical to confirm if there is truly no further unknowns to uncover of tweets vs price action as well as further strengthen analysis possibilities based on positive, negative, or neutral sentiment.
