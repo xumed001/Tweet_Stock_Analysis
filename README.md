@@ -1,6 +1,6 @@
 # Twitter & Stock Price Analysis  
 
-## Purpose 
+## Project Summary 
 
 The purpose of this project is to analyze the correlation, if any, that engagement/activity of a stock's ticker on Twitter has on it's selling activity on the NASDAQ. The question that we'd like to answer are the follwowing: 
 
