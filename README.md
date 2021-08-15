@@ -1,4 +1,6 @@
 # Twitter & Stock Price Analysis 
+![twitter.jpg](analysis_images/twitter.jpg)
+
 ## Quick Links 
 
 -    Dashboard: **[Click Here to Visit Our Tableau Public Dashboard.](https://public.tableau.com/app/profile/tara.flynn/viz/Tweet_Stock_Analysis/Dashboard12?publish=yes)**
