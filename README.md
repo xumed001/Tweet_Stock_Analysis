@@ -126,9 +126,7 @@ Using a date filter to drill down, a user could use this worksheet in the dashbo
 We noticed a good deal of promotional tweets that look like Robinhood users attempting to recruit more users, so a future iteration of this model could explore whether these promotions have a significant effect on the market. Additionally, another improvement could be to evaluate the sentiment of tweets and whether they can positively or negatively affect how a stock is sold. 
 
 ## Machine Learning Model 
-
-This analysis will use a neural network with Relu activation to model the correlation between volume of tweets and perception of tweets against the change in daily price. 
-
+ 
 **Description of preliminary data preprocessing:**
  - the data pre-processing was done by first summing up the # of tweets for the day as `tweet_activity` and keeping the `date`, `volume` and `price-action` for each ticker. Then separating each ticker into their own csv file and exporting it into the ML model.
 
