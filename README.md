@@ -9,7 +9,7 @@
 
 ## Project Summary 
 
-The purpose of this project is to analyze the correlation, if any, that engagement/activity of a stock's ticker on Twitter has on it's selling activity on the NASDAQ. The question that we'd like to answer are the follwowing: 
+The purpose of this project was to analyze how or if Twitter influences the Stock Market. Due to the limitations of the tweet dataset the research was done only on the top `NASDAQ` stocks which are `AAPL` (apple), `AMZN` (amazon), `GOOGL` (google), `MSFT`(microsoft) and `TSLA` (tesla) from the year 2015 to 2019. 
 
 **Hypothesis:**
  - Can we predict how much a stock will trade based on how it's trending on social media?
@@ -155,8 +155,18 @@ This analysis will use a neural network with Relu activation to model the correl
  - As mentioned above the current model yields an accuracy score of 97%. Meaning the model can predict if a given stock is liquid (above avg daily volume ) feeding the dataset with extreme accuracy. 
 
 ## Conclusion
-Through our research, we identified that our original hypothesis was indeed correct that Twitter activity has an impact and correlation with stock activity. From our findings, we were able to predict with a 97% accuracy of Tweets vs Stock Liquidity. Regarding twitter vs action price, we were not able to find a strong correlation, but we identified ways for research to be investigated further through next step iterations.
+Through our research, we identified that our original hypothesis was indeed correct that Twitter has an impact on the Stock Market. From our findings, we were able to discover a positive correlation between `tweet activity` vs `stock volume`. 
 
-For next step iterations, there is opportunity to further drill into qualititative tweet features using Vader, to categorize tweets through positive, neutral, or negative tweets to further verify their impact on stock liquidity and of course price action. We believe that this next step iteration can be cruical to confirm if there is truly no further unknowns to uncover of tweets vs price action as well as further strengthen analysis possibilities based on positive, negative, or neutral sentiment.
+But Regarding `tweet activity` vs `price action`, we were not able to find a strong positive correlation, but we identified ways for research to be investigated further through next step iterations.
+
+Since `tweet activity` and `stock volume` had a positive correlation, meaning that if the number of tweet activity increased, the volume of that given stock also increased. This finding was then used to make predictions on the `Liquidity` of the Stock.  Machine Learning models like `Logistic Regression` and `Artificial Neural Network` were used to train a model that predicts Liquidity with the highest accuracy.
+
+After many different variations the final prediction accuracy of the model was 97%. Meaning that if the model was given `tweet activity` data and `stock volume` data it could correctly identify how liquid the stock was at any given day. 
+
+Finally due to the time constraints of the project predicting the stock liquidity was the only thing we were able to accomplish given twitter and the stock market data. The group also had ideas using `NLP`(Natural Language Processing) and `VaderSentiment` to further dive into the tweets itself and discover how that would influence the Stocks. 
+
+
+
+
 
 
