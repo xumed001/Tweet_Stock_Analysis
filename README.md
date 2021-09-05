@@ -31,7 +31,7 @@ The ERD for the database that will connect each of these data sources is shown b
   The database utilized was PostgresSQL with pgadmin 4. Data collected from Kaggle and Yahoo Finance were cleaned during the pre-processing stages with `pandas` and brought into our environment. 5 Ticker tables were brought into our database, 1 for each ticker, and further consolidated to form our master table data. Postgres database was then connected our our machine learning ipynb file for further analysis for prediction and accuracy.
 
   ### Machine Learning
-  SciKitLearn and Tensorflow is the ML library utilized. Machine Learning models utilized were `Linear Regression`, `Logistic Regression`, and `Artifical Neural Network`.
+  SciKitLearn and Tensorflow were the ML library utilized for this Project. The three Machine Learning models utilized were `Linear Regression`, `Logistic Regression`, and `Artifical Neural Network`.
 
 
   ### Dashboard and Analysis
